@@ -1,0 +1,43 @@
+{%extends "index.html"%}
+{% block headings %}
+<h3>AI Report Generator</h3>
+{% endblock %}
+{% block content %}
+<div class="container-sm">
+<form method='POST'>
+    <br/>
+    <div class="mb-3" align="center">
+        <label for="aim" > <h5>Aim </h5></label>
+        <input type="text" name="aim" class="form-control" id="aim" placeholder="Type in the name of your Experiment">
+      </div>
+    <br />
+    <div class="mb-3" align="center">
+        <label for="description" ><h5>Description</h5></label>
+        <textarea class="form-control" name="description" id="description" placeholder="Describe your Experiment in a brief (The more you provide the better your Report will be)" rows="3"></textarea>
+      </div>
+    <br/>
+    <div class="mb-3" align="center">
+        <label for="material_required" ><h5>Material_Required</h5></label>
+        <textarea class="form-control" name="material_required" id="material_required" placeholder="List down the Materials Required For your Experiment" rows="3"></textarea>
+      </div>
+    <br />
+    <div class="row g-3 align-items-center"  align="center">
+        <div class="col-auto">
+          <label for="Experiment_Title" ><h5>Experiment_Title</h5></label>
+        </div>
+        <div class="col-auto">
+          <input type="Experiment_Title" name="Experiment_Title" id="Experiment_Title" class="form-control" aria-describedby="Experiment_Title">
+        </div>
+        <div class="col-auto">
+          <span id="Experiment_Title" class="form-text">
+            This will be The Title for your Report not your file name.
+          </span>
+        </div>
+      </div>
+    <br />
+    <div align="center">
+      <button type="submit" class="btn btn-primary">Generate</button>
+    </div>
+  </form>
+</div>
+{% endblock %}
